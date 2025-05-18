@@ -10,6 +10,14 @@ import authRoutes from './routes/auth.route.js';
 import postRoutes from './routes/post.route.js';
 import commentRoutes from './routes/comment.route.js';
 
+const cors = require('cors');
+
+app.use(cors({
+  origin: "https://blogify-8g81.onrender.com", // frontend URL
+  credentials: true,
+}));
+
+
 // Recreate __dirname and __filename for ES Modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

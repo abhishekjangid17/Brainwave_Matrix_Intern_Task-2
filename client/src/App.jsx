@@ -14,6 +14,8 @@ import UpdatePost from './pages/UpdatePost'
 import PostPage from './pages/PostPage'
 import ScrollToTop from './components/ScrollToTop'
 import Search from './pages/Search'
+const API = import.meta.env.VITE_API_URL;
+fetch(`${API}/api/posts`); // or axios.get(`${API}/api/posts`)
 
 export default function App() {
   return (
